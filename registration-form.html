@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table{
+          border: 1px solid rgb(107, 107, 107);
+          position: absolute;
+        }
+
+        th {
+            border: 1px solid rgb(107, 107, 107);
+            position: relative;
+            text-align: left;
+        }
+
+        td {
+            border: 1px solid rgb(107, 107, 107);
+            position: relative;
+            text-align: left;
+        }
+
+        input { 
+            width: 100%;
+            position: relative;
+        }
+        select {
+            font-size: 1;
+        }
+
+    </style>
+</head>
+<body>
+    <form>
+        <table style="width:100%">
+            <!-- tr is a one row not column-->
+            <tr>
+              <th>First Name</th>
+              <td><input type = "text"></td>
+            </tr>
+            <tr>
+              <th>Last Name</th>
+              <td><input type = "text"></td>
+            </tr>
+            <tr>
+              <th>Email</th>
+              <td><input type = "text"></td>
+            </tr>
+            <tr>
+              <th>Gender</th>
+              <td>
+                <select name="gender" id="gender">
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                  <option value="Others">Others</option>
+                </select>
+                </td>
+            </tr>
+            <tr>
+              <th>Date of Birth</th>
+              <td><input type = "text"></td>
+            </tr>
+            <tr>
+              <th>Address</th>
+              <td><input type = "text"></td>
+            </tr>
+            <tr>
+              <th>City</th>
+              <td><input type = "text"></td>
+            </tr>
+            <tr>
+              <th>Zip Code</th>
+              <td><input type = "text"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
