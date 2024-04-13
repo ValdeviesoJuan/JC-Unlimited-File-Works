@@ -9,101 +9,114 @@
 </head>
 <body class="flex">
     <div class="w-1/5 h-96 shadow-2xl m-4 p-3">
-
         <h1 class="text-center text-2xl font-medium">Create an Account</h1>
-
-        <form action="" class="">
-            <div class="mx-5">
-                <label class="block text-gray-700 text-base font-semibold mt-2" for="name">
+        <form action="" class="" id="onlyForm">
+            <div class="mx-5 mt-4">
+                <label class="block text-gray-700 text-base font-semibold " for="name">
                   Name
                 </label>
-                <input class="appearance-none h-10 border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mt-2" id="name" type="text" >
+                <input type="text" id="name" class="appearance-none h-10 border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" type="text" >
             </div>
 
-            <div class="mb-11">
-                <label class="block text-gray-700 text-base font-semibold mt-2" for="email">
+            <div class="mx-5 mt-4">
+                <label class="block text-gray-700 text-base font-semibold " for="email">
                   Email
                 </label>
-                <input class="appearance-none h-10 border border-red-500 rounded w-full py-2 px-3 text-gray-700 mt-2 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email">       
+                <input type="email" id="email" class="appearance-none h-10 border border-gray-500 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email">       
             </div>
 
-            <div class="mt-2">
-                <label for="role" class="font-semibold mt-2">Role</label>
-                <select name="role" id="Role" class="w-full h-10 border rounded py-2 px-3 text-gray-700 mt-2">
-                    <option value="admin">Admin</option>
-                    <option value="user">User</option>
+            <div class="mx-5 mt-4">
+                <label for="role" class="font-semibold ">Role</label>
+                <select name="role" id="Role" class="w-full h-10 border rounded py-2 px-3 text-gray-700 ">
+                    <option value="Admin">Admin</option>
+                    <option value="User">User</option>
                 </select>
             </div>
 
-            <button type="button" class="mt-6 w-full h-10 bg-blue-500 hover:bg-blue-700 text-white font-bold py-5 px-4 rounded focus:outline-none focus:shadow-outline" type="button">Create Account</button>
+            <button type="submit" class="mt-10   w-full h-10 py-2 px-3 bg-blue-500 hover:bg-blue-700 text-white font-bold rounded focus:outline-none focus:shadow-outline" type="button">Create Account</button>
         </form>
 
     </div>
 
-    <div class="w-3/4 h-96 shadow-2xl m-4 p-3">
+    <div class="w-3/4 h-96 shadow-2xl m-4 p-3 max-h-full overflow-y-auto">
         <h1 class="text-left text-2xl font-medium m-5">User List</h1>
-
-        <div class="relative overflow-x-auto shadow-md sm:rounded-lg m-5">
-            <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-                <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-                    <tr>
-                        <th scope="col" class="px-6 py-3 text-center">
-                            ID
-                        </th>
-                        <th scope="col" class="px-6 py-3 text-center">
-                            Name
-                        </th>
-                        <th scope="col" class="px-6 py-3 text-center">
-                            Email
-                        </th>
-                        <th scope="col" class="px-6 py-3 text-center">
-                            Role
-                        </th>
-                        <th scope="col" class="px-6 py-3 text-center">
-                            Action
-                        </th>
-                    </tr>
-                </thead>
-                <tbody class="border-collapse border border-slate-400">
-                    <tr class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border dark:border-gray-700 text-black">
-                        <th scope="row" class="px-6 py-4 font-medium text-black whitespace-nowrap dark:text-white border border-slate-300">
-                            1
-                        </th>
-                        <td class="px-6 py-4 border border-slate-300">
-                            Ronalyn Anne Padilla
-                        </td>
-                        <td class="px-6 py-4 border border-slate-300">
-                            ronalyn.padilla@gmail.com
-                        </td>
-                        <td class="px-6 py-4 border border-slate-300">
-                            Admin
-                        </td>
-                        <td class="px-6 py-4 border border-slate-300">
-                            <i class="fa-solid fa-pen-to-square" style="color: #005eff;"></i>
-                            <i class="fa-solid fa-trash-can" style="color: #ff0000;"></i>
-                        </td>
-                    </tr>
-                    <tr class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border dark:border-gray-700">
-                        <th scope="row" class="px-6 py-4 font-medium text-black whitespace-nowrap dark:text-white border border-slate-300">
-                            2
-                        </th>
-                        <td class="px-6 py-4 border border-slate-300">
-                            Ronalyn Test
-                        </td>
-                        <td class="px-6 py-4 border border-slate-300">
-                            ronalyn.test@gmail.com
-                        </td>
-                        <td class="px-6 py-4 border border-slate-300">
-                            User
-                        </td>
-                        <td class="px-6 py-4 border border-slate-300">
-                            <i class="fa-solid fa-pen-to-square" style="color: #005eff;"></i>
-                            <i class="fa-solid fa-trash-can" style="color: #ff0000;"></i>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+        <table id="onlyTable" class="relative text-sm text-left w-full rtl:text-right text-gray-500 dark:text-gray-400">
+            <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                <tr>
+                    <th scope="col" class="px-6 py-3 text-center">
+                        ID
+                    </th>
+                    <th scope="col" class="px-6 py-3 text-center">
+                        Name
+                    </th>
+                    <th scope="col" class="px-6 py-3 text-center">
+                        Email
+                    </th>
+                    <th scope="col" class="px-6 py-3 text-center">
+                        Role
+                    </th>
+                    <th scope="col" class="px-6 py-3 text-center">
+                        Action
+                    </th>
+                </tr>
+            </thead>
+            <tbody class="border-collapse border border-slate-400">
+                <tr class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border dark:border-gray-700 text-black">
+                    <th scope="row" class="px-6 py-4 font-medium text-black whitespace-nowrap dark:text-white border border-slate-300">
+                        1
+                    </th>
+                    <td class="px-6 py-4 border border-slate-300">
+                        Ronalyn Anne Padilla
+                    </td>
+                    <td class="px-6 py-4 border border-slate-300">
+                        ronalyn.padilla@gmail.com
+                    </td>
+                    <td class="px-6 py-4 border border-slate-300">
+                        Admin
+                    </td>
+                    <td class="px-6 py-4 border border-slate-300 text-center">
+                        <button id = "edit-btn" class="cursor-pointer"><i class="fa-solid fa-pen-to-square" style="color: #005eff;"></i></button>
+                        <button id = "delete-btn" class="cursor-pointer"><i class="fa-solid fa-trash-can" style="color: #ff0000;"></i></button>
+                    </td>
+                </tr>
+                <tr class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border dark:border-gray-700 text-black">
+                    <th scope="row" class="px-6 py-4 font-medium text-black whitespace-nowrap dark:text-white border border-slate-300">
+                        2
+                    </th>
+                    <td class="px-6 py-4 border border-slate-300">
+                        Ronalyn Test
+                    </td>
+                    <td class="px-6 py-4 border border-slate-300">
+                        ronalyn.test@gmail.com
+                    </td>
+                    <td class="px-6 py-4 border border-slate-300">
+                        User
+                    </td>
+                    <td class="px-6 py-4 border border-slate-300 text-center">
+                        <button id="edit-btn" class="cursor-pointer"><i class="fa-solid fa-pen-to-square" style="color: #005eff;"></i></button>
+                        <button id="delete-btn" class="cursor-pointer"><i class="fa-solid fa-trash-can" style="color: #ff0000;"></i></button>
+                    </td>
+                </tr>
+                <tr class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border dark:border-gray-700 text-black">
+                    <th scope="row" class="px-6 py-4 font-medium text-black whitespace-nowrap dark:text-white border border-slate-300">
+                        3
+                    </th>
+                    <td class="px-6 py-4 border border-slate-300">
+                        Ronalyn Anne Padilla
+                    </td>
+                    <td class="px-6 py-4 border border-slate-300">
+                        ronalyn.padilla@gmail.com
+                    </td>
+                    <td class="px-6 py-4 border border-slate-300">
+                        Admin
+                    </td>
+                    <td class="px-6 py-4 border border-slate-300 text-center">
+                        <button id = "edit-btn" class="cursor-pointer"><i class="fa-solid fa-pen-to-square" style="color: #005eff;"></i></button>
+                        <button id = "delete-btn" class="cursor-pointer"><i class="fa-solid fa-trash-can" style="color: #ff0000;"></i></button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </body>
 <script src="scripts.js"></script>
